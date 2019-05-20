@@ -137,8 +137,6 @@ public class PlayerMotor : MonoBehaviour
         MovementUpdate();
 
         CalculateVelocity();
-
-        DebugFunc();
     }
     #endregion
 
@@ -181,10 +179,9 @@ public class PlayerMotor : MonoBehaviour
 
     public void Hook()
     {
-        Ray hookRay = new Ray(m_camera.transform.position, m_camera.transform.forward);
         RaycastHit hit;
 
-        if (Physics.SphereCast(hookRay, m_HookRadius, out hit, m_MaxHookLength, m_GroundLayer))
+        if (CanHook(out hit))
         {
             m_Line.SetPosition(0, m_LineTransform.position);
             m_hookPoint = hit.point;
@@ -204,6 +201,13 @@ public class PlayerMotor : MonoBehaviour
         m_Line.SetPosition(1, Vector3.zero);
 
         m_hooked = false;
+    }
+
+    public bool CanHook(out RaycastHit _hit)
+    {
+        Ray hookRay = new Ray(m_camera.transform.position, m_camera.transform.forward);
+       
+        return Physics.SphereCast(hookRay, m_HookRadius, out _hit, m_MaxHookLength - m_HookRadius, m_GroundLayer);
     }
     #endregion
 
@@ -274,7 +278,6 @@ public class PlayerMotor : MonoBehaviour
         calcVel += GravityVelocity;
 
         GravityVelocity = Vector3.Lerp(GravityVelocity, calcVel, m_HookRatio);
-        Debug.Log(GravityVelocity.magnitude);
 
         if ((m_hookPoint - m_camera.transform.position).sqrMagnitude > m_MaxHookLength * m_MaxHookLength)
         {
@@ -293,7 +296,6 @@ public class PlayerMotor : MonoBehaviour
         float desiredSpeed = Mathf.Lerp(m_MinSlopeSpeed, m_MaxVelocity, perc);
         Vector3 desiredVel = dir * desiredSpeed;
         GravityVelocity = Vector3.Lerp(GravityVelocity, desiredVel, m_SlopeRatio);
-        Debug.Log(GravityVelocity);
     }
     #endregion
 
@@ -468,10 +470,5 @@ public class PlayerMotor : MonoBehaviour
 
         m_lastPos = transform.position;
         m_lastVel = Velocity;
-    }
-
-    private void DebugFunc()
-    {
-        Debug.DrawRay(transform.position, InputVelocity.normalized * 0.5f, Color.yellow, 2.5f);
     }
 }

@@ -103,17 +103,22 @@ public static class GlobalInput
     public static void SaveInput()
     {
         XmlSerializer serializer = new XmlSerializer(typeof(GlobalInputDatabase));
-        FileStream stream = new FileStream(Application.dataPath + "/StreamingFiles/XML/GlobalInput.xml", FileMode.Create);
+        FileStream stream = new FileStream(Application.dataPath + "/Resources/XML/GlobalInput.xml", FileMode.Create);
         serializer.Serialize(stream, s_database);
         stream.Close();
     }
 
     public static void LoadInput()
     {
-        XmlSerializer serializer = new XmlSerializer(typeof(GlobalInputDatabase));
-        FileStream stream = new FileStream(Application.dataPath + "/StreamingFiles/XML/GlobalInput.xml", FileMode.Open);
-        s_database = (GlobalInputDatabase)serializer.Deserialize(stream);
-        stream.Close();
+        XmlDocument xmlDoc = new XmlDocument();
+        TextAsset textAsset = Resources.Load<TextAsset>("XML/GlobalInput");
+        xmlDoc.LoadXml(textAsset.text);
+
+        using (TextReader reader = new StringReader(xmlDoc.InnerXml))
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(GlobalInputDatabase));
+            s_database = (GlobalInputDatabase)serializer.Deserialize(reader);
+        }
 
         s_loaded = true;
     }

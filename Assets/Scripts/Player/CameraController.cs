@@ -19,6 +19,7 @@ public class CameraController : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = m_lockState;
+        Cursor.visible = false;
     }
 
     private void Update()
