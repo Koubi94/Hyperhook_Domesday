@@ -88,6 +88,7 @@ public class PlayerMotor : MonoBehaviour
     public float m_HookSpeed = 3.0f;
     public float m_HookInputRatio = 0.025f;
     [Range(0, 1)] public float m_HookRatio = 0.55f;
+    public LayerMask m_HookLayer;
 
     private bool m_hooked;
     private Vector3 m_hookPoint;
@@ -207,7 +208,7 @@ public class PlayerMotor : MonoBehaviour
     {
         Ray hookRay = new Ray(m_camera.transform.position, m_camera.transform.forward);
        
-        return Physics.SphereCast(hookRay, m_HookRadius, out _hit, m_MaxHookLength - m_HookRadius, m_GroundLayer);
+        return Physics.SphereCast(hookRay, m_HookRadius, out _hit, m_MaxHookLength - m_HookRadius, m_HookLayer);
     }
     #endregion
 

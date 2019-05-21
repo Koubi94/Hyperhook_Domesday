@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("UI")]
+    public GameMenuManager m_Menu;
+
     [Header("Movement")]
     public float m_WalkSpeed = 5.5f;
     public float m_SprintSpeed = 11.0f;
@@ -33,6 +36,11 @@ public class PlayerController : MonoBehaviour
 
     private void InputUpdate()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            m_Menu.TogglePause();
+        }
+
         if (Input.GetButtonDown("Jump"))
         {
             m_motor.Jump(m_JumpForce);
