@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1533.9962, g: 2172.5493, b: 3458.1382, a: 1}
+  m_IndirectSpecularColor: {r: 1533.9884, g: 2172.5493, b: 3458.021, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2527,6 +2527,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1485334670}
     m_Modifications:
+    - target: {fileID: 4660300311272423724, guid: f4a3ca7b998a2f1498cf21f9156e7551,
+        type: 3}
+      propertyPath: m_Name
+      value: BladeShooter
+      objectReference: {fileID: 0}
     - target: {fileID: 78845051458996453, guid: f4a3ca7b998a2f1498cf21f9156e7551,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2596,11 +2601,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.102
-      objectReference: {fileID: 0}
-    - target: {fileID: 4660300311272423724, guid: f4a3ca7b998a2f1498cf21f9156e7551,
-        type: 3}
-      propertyPath: m_Name
-      value: BladeShooter
       objectReference: {fileID: 0}
     - target: {fileID: 4682437525700329507, guid: f4a3ca7b998a2f1498cf21f9156e7551,
         type: 3}
@@ -2733,6 +2733,36 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8975207866530264842, guid: f4a3ca7b998a2f1498cf21f9156e7551,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dd4e509afe049c946b0ff373786b3e7a, type: 2}
+    - target: {fileID: 4660300311272423731, guid: f4a3ca7b998a2f1498cf21f9156e7551,
+        type: 3}
+      propertyPath: m_retrieveSpeed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4660300311272423731, guid: f4a3ca7b998a2f1498cf21f9156e7551,
+        type: 3}
+      propertyPath: m_bladeSpeed
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284617466003093173, guid: f4a3ca7b998a2f1498cf21f9156e7551,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d53c0c801aad69d468cd0b37c2692b2f, type: 2}
+    - target: {fileID: 1823808414678832732, guid: f4a3ca7b998a2f1498cf21f9156e7551,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dd4e509afe049c946b0ff373786b3e7a, type: 2}
+    - target: {fileID: 5894923688558118279, guid: f4a3ca7b998a2f1498cf21f9156e7551,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dd4e509afe049c946b0ff373786b3e7a, type: 2}
+    - target: {fileID: 2024176672110807370, guid: f4a3ca7b998a2f1498cf21f9156e7551,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
