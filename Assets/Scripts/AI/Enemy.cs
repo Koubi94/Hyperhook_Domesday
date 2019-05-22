@@ -37,17 +37,24 @@ public class Enemy : MonoBehaviour
 
         if (IsPlayerInRange() && IsPlayerInSight())
         {
+            if (!m_agent.isStopped)
+            {
+                m_agent.isStopped = true;
+            }
+
             if (m_currentCooldown == 0)
             {
+                transform.LookAt(m_player.transform, Vector3.up);
                 Shoot();
             }
         }
-        else if (IsPlayerInRange())
-        {
-
-        }
         else
         {
+            if (m_agent.isStopped)
+            {
+                m_agent.isStopped = false;
+            }
+
             m_agent.SetDestination(m_player.transform.position);
         }
 

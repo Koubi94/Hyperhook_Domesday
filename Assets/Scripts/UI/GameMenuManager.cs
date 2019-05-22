@@ -7,6 +7,8 @@ public class GameMenuManager : MenuManager
 {
     public GameObject m_UI;
     public GameObject m_Menu;
+    public GameObject m_GameOver;
+    public Camera m_GameOverCam;
 
     private bool m_paused;
 
@@ -39,6 +41,16 @@ public class GameMenuManager : MenuManager
         Cursor.visible = false;
 
         m_paused = false;
+    }
+
+    public void GameOver()
+    {
+        m_GameOver.SetActive(true);
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        m_GameOverCam.gameObject.SetActive(true);
     }
 
     public void TogglePause()

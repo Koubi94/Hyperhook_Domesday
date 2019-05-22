@@ -53,7 +53,6 @@ public class SawShooterScript : MonoBehaviour
         {
             //if (!retrieving)
             //{
-            Debug.Log("Mouse clicked");
 
             if (blade1Loaded)
             {

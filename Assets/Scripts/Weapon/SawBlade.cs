@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SawBlade : MonoBehaviour
 {
+    public int m_Damage = 130;
+
     private Rigidbody m_rigidBody;
 
     private void Awake()
@@ -13,10 +15,18 @@ public class SawBlade : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        m_rigidBody.velocity = Vector3.zero;
-        m_rigidBody.useGravity = false;
-
-        //transform.position = other.ClosestPointOnBounds(transform.position);
-        Debug.Log(other.name);
+        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            other.GetComponentInParent<EnemyData>().Damage(m_Damage);
+        }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Bullet"))
+        {
+            return;
+        }
+        else
+        {
+            m_rigidBody.velocity = Vector3.zero;
+            m_rigidBody.useGravity = false;
+        }
     }
 }

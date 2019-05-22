@@ -2,47 +2,51 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using Random = UnityEngine.Random;
+using TMPro;
 
 public class WaveManager : MonoBehaviour
 {
+    public static WaveManager Get { get; private set; }
+
+    public PlayerData m_player;
+
     public Transform[] Waypoints;
-    //public Transform m_waypoint1;
-    //public Transform m_waypoint2;
-    //public Transform m_waypoint3;
-    //public Transform m_waypoint4;
-    public Text m_waveText;
-    public Text m_remainingEnemyText;
+    public TMP_Text m_waveText;
+    public TMP_Text m_remainingEnemyText;
     public GameObject m_enemyPrefab;
 
-    public float m_gameStartTimer = 3f;
-    public float m_waveTimer = 5f;
+    public float m_TimeBeforeStart = 3f;
+    public float m_TimeBetweenWaves = 5f;
 
     private float m_nextWaveTimer;
     private int m_waveCounter;
+    private int m_remainingEnemies;
 
     private bool m_waveInProgress = false;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        m_nextWaveTimer = m_gameStartTimer;
-        m_waveCounter = 0;
-
+        Get = this;
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+        m_nextWaveTimer = m_TimeBeforeStart;
+    }
+
     void Update()
     {
-        m_nextWaveTimer -= Time.deltaTime;
-
-        if (m_nextWaveTimer <= 0)
+        if (!m_waveInProgress)
         {
-            if (!m_waveInProgress)
-            {
-                SendNextWave();
-            }
+            m_nextWaveTimer -= Time.deltaTime;
+
+            Debug.Log(m_nextWaveTimer);
+        }
+
+        if (m_nextWaveTimer <= 0 && !m_waveInProgress)
+        {
+            SendNextWave();
         }
     }
 
@@ -50,14 +54,36 @@ public class WaveManager : MonoBehaviour
     {
         m_waveInProgress = true;
         m_waveCounter++;
-        m_waveText.gameObject.SetActive(true);
-        m_waveText.text = "Wave: " + m_waveCounter;
-        m_remainingEnemyText.gameObject.SetActive(true);
+        m_waveText.text = m_waveCounter.ToString();
 
-        for (int i = 0; i <= m_waveCounter; i++)
+        for (int i = 0; i <= m_waveCounter - 1; i++)
         {
-            int r = Random.Range(0, 4);
+            int r = Random.Range(0, Waypoints.Length);
             GameObject go = Instantiate(m_enemyPrefab, Waypoints[r].position, Waypoints[r].rotation);
         }
+
+        m_remainingEnemies = m_waveCounter;
+
+        m_remainingEnemyText.text = $"Enemies: {m_remainingEnemies.ToString()}";
+    }
+
+    public void EnemyDead()
+    {
+        m_remainingEnemies--;
+
+        m_remainingEnemyText.text = $"Enemies: {m_remainingEnemies.ToString()}";
+
+        if (m_remainingEnemies <= 0)
+        {
+            StopWave();
+        }
+    }
+
+    private void StopWave()
+    {
+        m_nextWaveTimer = m_TimeBetweenWaves;
+        m_player.Heal(50);
+
+        m_waveInProgress = false;
     }
 }
