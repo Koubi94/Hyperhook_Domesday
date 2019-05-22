@@ -54,7 +54,7 @@ public class WaveManager : MonoBehaviour
     {
         m_waveInProgress = true;
         m_waveCounter++;
-        m_waveText.text = m_waveCounter.ToString();
+        m_waveText.text = $"Wave: {m_waveCounter.ToString()}";
 
         for (int i = 0; i <= m_waveCounter - 1; i++)
         {

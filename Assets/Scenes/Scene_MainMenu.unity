@@ -448,7 +448,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 25301036}
   m_LocalRotation: {x: 0.081589974, y: 0.5969052, z: -0.0614232, w: 0.7957854}
-  m_LocalPosition: {x: 21.502851, y: 24.117495, z: -50.60539}
+  m_LocalPosition: {x: 21.502851, y: 27.74, z: -49.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1748,7 +1748,7 @@ MonoBehaviour:
   luxAtDistance: 1
   m_InnerSpotPercent: 0
   lightDimmer: 1
-  m_VolumetricDimmer: 1
+  m_VolumetricDimmer: 0.5
   lightUnit: 2
   sunDiskSize: 1
   sunHaloSize: 0.1
@@ -6834,6 +6834,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Buttons
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460665083468995136, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8460665083468995137, guid: aa1a2dad631bb024a96ca62cf45f325b,
         type: 3}

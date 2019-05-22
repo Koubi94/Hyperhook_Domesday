@@ -2454,17 +2454,17 @@ PrefabInstance:
     - target: {fileID: 621409104686462584, guid: 9964bb98fdf858d4a8933baa0e688183,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.08498888
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 621409104686462584, guid: 9964bb98fdf858d4a8933baa0e688183,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.08498891
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 621409104686462584, guid: 9964bb98fdf858d4a8933baa0e688183,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.08498891
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 621409104686462587, guid: 9964bb98fdf858d4a8933baa0e688183,
         type: 3}
@@ -4391,8 +4391,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 72
-  m_fontSizeBase: 72
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4408,7 +4408,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -5051,11 +5051,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8460665083066647743, guid: aa1a2dad631bb024a96ca62cf45f325b,
-        type: 3}
-      propertyPath: m_Name
-      value: Btn_Restart
-      objectReference: {fileID: 0}
     - target: {fileID: 8460665083066647741, guid: aa1a2dad631bb024a96ca62cf45f325b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -5065,6 +5060,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460665083666744289, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1704632207}
+    - target: {fileID: 8460665083666744289, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460665083666744289, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460665083666744289, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Scene_MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460665083066647743, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_Name
+      value: Btn_Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460665083666744291, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_Name
+      value: Btn_Menu
       objectReference: {fileID: 0}
     - target: {fileID: 8460665083039066094, guid: aa1a2dad631bb024a96ca62cf45f325b,
         type: 3}
@@ -5096,56 +5121,6 @@ PrefabInstance:
       propertyPath: m_textInfo.spaceCount
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8460665084878955385, guid: aa1a2dad631bb024a96ca62cf45f325b,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460665084878955385, guid: aa1a2dad631bb024a96ca62cf45f325b,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460665084878955385, guid: aa1a2dad631bb024a96ca62cf45f325b,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460665084878955385, guid: aa1a2dad631bb024a96ca62cf45f325b,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460665084878955385, guid: aa1a2dad631bb024a96ca62cf45f325b,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460665083666744291, guid: aa1a2dad631bb024a96ca62cf45f325b,
-        type: 3}
-      propertyPath: m_Name
-      value: Btn_Menu
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460665083666744289, guid: aa1a2dad631bb024a96ca62cf45f325b,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1704632207}
-    - target: {fileID: 8460665083666744289, guid: aa1a2dad631bb024a96ca62cf45f325b,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SwitchScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460665083666744289, guid: aa1a2dad631bb024a96ca62cf45f325b,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460665083666744289, guid: aa1a2dad631bb024a96ca62cf45f325b,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Scene_MainMenu
-      objectReference: {fileID: 0}
     - target: {fileID: 8460665084815982121, guid: aa1a2dad631bb024a96ca62cf45f325b,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -5175,6 +5150,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460665084878955385, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460665084878955385, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460665084878955385, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460665084878955385, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460665084878955385, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa1a2dad631bb024a96ca62cf45f325b, type: 3}
@@ -7187,11 +7187,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8460665083066647743, guid: aa1a2dad631bb024a96ca62cf45f325b,
-        type: 3}
-      propertyPath: m_Name
-      value: Btn_Resume
-      objectReference: {fileID: 0}
     - target: {fileID: 8460665083066647741, guid: aa1a2dad631bb024a96ca62cf45f325b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -7201,6 +7196,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UnPause
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460665083666744289, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1704632207}
+    - target: {fileID: 8460665083666744289, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460665083666744289, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460665083666744289, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Scene_MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460665083066647743, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_Name
+      value: Btn_Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460665083666744291, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_Name
+      value: Btn_Menu
       objectReference: {fileID: 0}
     - target: {fileID: 8460665083039066094, guid: aa1a2dad631bb024a96ca62cf45f325b,
         type: 3}
@@ -7226,56 +7251,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: Resume
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460665084878955385, guid: aa1a2dad631bb024a96ca62cf45f325b,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460665084878955385, guid: aa1a2dad631bb024a96ca62cf45f325b,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460665084878955385, guid: aa1a2dad631bb024a96ca62cf45f325b,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460665084878955385, guid: aa1a2dad631bb024a96ca62cf45f325b,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460665084878955385, guid: aa1a2dad631bb024a96ca62cf45f325b,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460665083666744291, guid: aa1a2dad631bb024a96ca62cf45f325b,
-        type: 3}
-      propertyPath: m_Name
-      value: Btn_Menu
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460665083666744289, guid: aa1a2dad631bb024a96ca62cf45f325b,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1704632207}
-    - target: {fileID: 8460665083666744289, guid: aa1a2dad631bb024a96ca62cf45f325b,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SwitchScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460665083666744289, guid: aa1a2dad631bb024a96ca62cf45f325b,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460665083666744289, guid: aa1a2dad631bb024a96ca62cf45f325b,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Scene_MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 8460665084815982121, guid: aa1a2dad631bb024a96ca62cf45f325b,
         type: 3}
@@ -7306,6 +7281,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460665084878955385, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460665084878955385, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460665084878955385, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460665084878955385, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460665084878955385, guid: aa1a2dad631bb024a96ca62cf45f325b,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa1a2dad631bb024a96ca62cf45f325b, type: 3}
