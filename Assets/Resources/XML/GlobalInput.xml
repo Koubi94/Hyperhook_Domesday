@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<GlobalInputDatabase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Keys>
+    <Key Name="Jump">
+      <KeyCodes Primary="Space" Secondary="None" />
+    </Key>
+    <Key Name="Sprint">
+      <KeyCodes Primary="LeftShift" Secondary="None" />
+    </Key>
+    <Key Name="Crouch">
+      <KeyCodes Primary="LeftControl" Secondary="None" />
+    </Key>
+    <Key Name="Fire">
+      <KeyCodes Primary="Mouse0" Secondary="None" />
+    </Key>
+    <Key Name="Hook">
+      <KeyCodes Primary="Mouse1" Secondary="None" />
+    </Key>
+  </Keys>
+  <Axes>
+    <Axis Name="GameAxis">
+      <KeyCodes Primary="None" Secondary="None" />
+      <KeyCodes Primary="None" Secondary="None" />
+    </Axis>
+  </Axes>
+  <DPads>
+    <DPad Name="Movement">
+      <KeyCodes Primary="D" Secondary="RightArrow" />
+      <KeyCodes Primary="A" Secondary="LeftArrow" />
+      <KeyCodes Primary="W" Secondary="UpArrow" />
+      <KeyCodes Primary="S" Secondary="DownArrow" />
+    </DPad>
+  </DPads>
+</GlobalInputDatabase>

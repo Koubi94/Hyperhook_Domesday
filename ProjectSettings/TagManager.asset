@@ -14,10 +14,10 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Ignore Hook
+  - Enemy
+  - Bullet
   - 
   - 
   - 
