@@ -5,11 +5,11 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    public float m_FirePower = 35.0f;
     public float m_Cooldown = 0.35f;
-    public GameObject m_BulletPrefab;
-    public Transform m_BulletPoint;
+    public float m_FirePower = 35.0f;
     public float m_FireRange = 75.0f;
+    public Transform m_BulletPoint;
+    public GameObject m_BulletPrefab;
 
     private float m_currentCooldown;
 
@@ -92,8 +92,14 @@ public class Enemy : MonoBehaviour
 
     private void Shoot()
     {
+        // calculate shot direction
+        Vector3 dist = m_player.GetPosition() - m_BulletPoint.position;
+        float timeToHit = dist.magnitude / m_FirePower;
+        Vector3 dir = m_player.GetPosition() - m_BulletPoint.position + m_player.GetVelocity() * timeToHit;
+
+        // shoot bullet
         GameObject go = Instantiate(m_BulletPrefab, m_BulletPoint.position, Quaternion.identity);
-        go.GetComponent<Rigidbody>().AddForce((m_player.GetPosition() - m_BulletPoint.position).normalized * m_FirePower, ForceMode.VelocityChange);
+        go.GetComponent<Rigidbody>().AddForce(dir.normalized * m_FirePower, ForceMode.VelocityChange);
         m_currentCooldown = m_Cooldown;
     }
 }

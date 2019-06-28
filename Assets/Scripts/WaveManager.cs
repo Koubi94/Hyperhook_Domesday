@@ -40,8 +40,6 @@ public class WaveManager : MonoBehaviour
         if (!m_waveInProgress)
         {
             m_nextWaveTimer -= Time.deltaTime;
-
-            Debug.Log(m_nextWaveTimer);
         }
 
         if (m_nextWaveTimer <= 0 && !m_waveInProgress)

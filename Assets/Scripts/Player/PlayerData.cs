@@ -14,6 +14,13 @@ public class PlayerData : MonoBehaviour
 
     public int Health { get; private set; }
 
+    private Rigidbody m_rigidbody;
+
+    private void Awake()
+    {
+        m_rigidbody = GetComponent<Rigidbody>();
+    }
+
     private void Start()
     {
         Health = m_MaxHealth;
@@ -23,6 +30,11 @@ public class PlayerData : MonoBehaviour
     public Vector3 GetPosition()
     {
         return transform.position + Vector3.up * m_EyeHeight;
+    }
+
+    public Vector3 GetVelocity()
+    {
+        return m_rigidbody.velocity;
     }
 
     public void Damage(int _damage)
